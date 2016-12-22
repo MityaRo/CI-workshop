@@ -19,13 +19,13 @@ before_deploy:
 - cat .netrc >> $HOME/.netrc
 - chmod 0600 /home/travis/.netrc
 - heroku apps
-- heroku apps | grep -q vasyaTest-$TRAVIS_BRANCH || heroku apps:create vasyaTest-$TRAVIS_BRANCH
-- heroku git:remote -a vasyaTest-$TRAVIS_BRANCH
+- heroku apps | grep -q vasya-test-$TRAVIS_BRANCH || heroku apps:create vasya-test-$TRAVIS_BRANCH
+- heroku git:remote -a vasya-test-$TRAVIS_BRANCH
 
 deploy:
   provider: heroku
   api_key: 37ee0bf7-ceb7-410d-ad7e-546120f66dba
-  app: vasyaTest-$TRAVIS_BRANCH
+  app: vasya-test-$TRAVIS_BRANCH
   on: $TRAVIS_BRANCH
 
 after_deploy:
