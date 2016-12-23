@@ -8,6 +8,6 @@ var branchUrl = 'http://[your prefix]-' + branchName + '.herokuapp.com'
 describe('Home page tests', function() {
     it('Header is correct', function() {
         browser.url(branchUrl)
-        browser.getText('h1').should.equal('My Site')
+        browser.getText('h1').should.equal('Your Site')
     });
 });
